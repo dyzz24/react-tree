@@ -58,7 +58,7 @@ export const Tree = ({ treeData, canClose, label, root }) => {
 
   return (
     <div className = 'tree'>
-    <header>
+    <header className = {root ? 'fixed' : ''}>
     {canClose && <div className={expanded ? 'toggleDiv' : 'toggleDiv close'} onClick={toggle}></div>}
     {label && <span onClick={toggle}>{label}</span>}
     {root ? <span className = 'maincount'>Всего элементов выбрано: {state.selectedItems} </span>: ''}
