@@ -19,13 +19,7 @@ export const Tree = ({ treeData, canClose, label, root }) => {
       selectItems(item => item.filter((elem) => elem !== id));
       dispatch({type: 'child-remove'})
     }
-
-
-
   }
-
-
-
 
   const parseTreeItems = itemList => {
     if (itemList && itemList.length > 0) {
