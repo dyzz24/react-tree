@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useReducer} from 'react';
+import {ContextApp, initialState, testReducer} from "./context/context";
 import './App.css';
 import { Tree } from './tree/tree';
 
@@ -180,9 +181,13 @@ function App() {
     }
   ];
 
+  const [state, dispatch] = useReducer(testReducer, initialState);
+
   return (
     <div className='App'>
+      <ContextApp.Provider value={{dispatch, state}}>
       <Tree treeData={treeData}></Tree>
+      </ContextApp.Provider>
     </div>
   );
 }

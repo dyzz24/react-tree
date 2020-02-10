@@ -44,7 +44,8 @@ ul {
 display: none;
 }
 
-.count {
+.count, .maincount {
     color: #ff5e5e;
     margin-left: 15px;
 }
+
