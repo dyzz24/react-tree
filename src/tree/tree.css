@@ -11,6 +11,7 @@ header {
 
 header span {
     color: #4badf4;
+    cursor: pointer;
 }
 
 .treeBody {
@@ -47,5 +48,6 @@ display: none;
 .count, .maincount {
     color: #ff5e5e;
     margin-left: 15px;
+    cursor: default;
 }
 
