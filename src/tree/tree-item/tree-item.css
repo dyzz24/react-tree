@@ -1,0 +1,72 @@
+.messageRow {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.messageRow.reverse {
+    flex-direction: row-reverse;
+}
+
+.avatar {
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 1px 2px 0.5px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+
+}
+
+.avatar img {
+    width: 95%;
+    height: 95%;
+}
+
+.messageRow span {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 14px;
+    max-width: 60%;
+    position: relative;
+    transform-origin: left bottom;
+    background: #557feb;
+    border-radius: 18px 18px 18px 0px;
+    margin: 0px 6px 10px;
+    overflow: hidden;
+    padding: 12px;
+    text-align: left;
+}
+
+.messageRow span p {
+    margin: 8px 0;
+}
+
+.authorString {
+    font-size: 16px;
+    margin-bottom: 12px !important;
+}
+
+.messageRow.reverse span {
+    border-radius: 18px 18px 0px;
+    background: rgba(255, 70, 70, 0.767);
+    color: black;
+    text-align: right;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+    
+    .avatar {
+    height: 35px;
+    width: 35px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px 0px;
+
+    }
+}

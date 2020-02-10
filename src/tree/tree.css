@@ -1,0 +1,41 @@
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header span {
+    color: #4badf4;
+}
+
+.treeBody {
+    display: flex;
+    padding-left: 20px;
+}
+
+li {
+    text-align: start;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+    
+}
+
+.toggleDiv {
+    background: red;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.treeBody.close{
+display: none;
+}
