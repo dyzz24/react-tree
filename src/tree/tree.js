@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './tree.css';
 import { TreeItem } from './tree-item/tree-item';
 
-export const Tree = ({ treeData }) => {
+export const Tree = ({ treeData, canClose, label }) => {
   const [expanded, toggleState] = useState(true);
+  console.log(treeData, canClose);
   const toggle = () => {
     console.log(treeData);
     toggleState(!expanded);
@@ -18,18 +19,14 @@ export const Tree = ({ treeData }) => {
           item.children.length > 0
         ) {
           return (
-            <div key={item.id || index} className = 'tree'>
-              <header>
-              <div className='toggleDiv' onClick={toggle}></div>
-              <span>{item.label}</span>
-              </header>
-              <div className = {expanded ? 'treeBody open' : 'treeBody close'}>
-              <Tree  treeData={item.children}></Tree>
-              </div>
-            </div>
+              <Tree key={item.id || index}
+                treeData={item.children}
+                canClose={true}
+                label={item.label}
+              ></Tree>
           );
         } else {
-          return <TreeItem  listData={item} key={item.id || index}></TreeItem>;
+          return <TreeItem listData={item} key={item.id || index}></TreeItem>;
         }
       });
 
@@ -40,8 +37,14 @@ export const Tree = ({ treeData }) => {
   };
 
   return (
-   <> 
-  <ul>{parseTreeItems(treeData)}</ul>
-  </>
+    <div className = 'tree'>
+    <header>
+    {canClose && <div className='toggleDiv' onClick={toggle}></div>}
+    {label && <span>{label}</span>}
+    </header>
+      <div className={expanded ? 'treeBody open' : 'treeBody close'}>
+        <ul>{parseTreeItems(treeData)}</ul>
+      </div>
+    </div>
   );
 };
