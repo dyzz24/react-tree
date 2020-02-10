@@ -4,14 +4,16 @@ import './tree-item.css';
 
 export const TreeItem = (props) => {
 
-  const {label} = props.listData;
+  const {label, id} = props.listData;
 
+const emitEvent = (id, event) => {
+    props.changeChild(id, event.target.checked)
+}
 
-// console.log(props);
   return (
     <li>
     <label>{label}
-    <input type = 'checkbox'></input>
+    <input type = 'checkbox' onChange = {e => emitEvent(id, e)}></input>
     </label>
     </li>
   )

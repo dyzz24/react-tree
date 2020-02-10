@@ -10,7 +10,7 @@ function App() {
       label: 'Корневая папка',
       children: [
         {
-          id: 1,
+          id: 100,
           label: 'Звук',
           children: [
             { id: 1, label: 'Основной звук' },
@@ -61,6 +61,8 @@ function App() {
                       id: 3,
                       label: 'Прочие установки',
                       children: [
+                        { id: 2, label: 'Программа 2' },
+                        { id: 33, label: 'Программа 3' },
                         {
                           id: 1,
                           label: 'Программа 1',
@@ -103,8 +105,6 @@ function App() {
                             },
                           ]
                         },
-                        { id: 2, label: 'Программа 2' },
-                        { id: 33, label: 'Программа 3' },
                         {
                           id: 4,
                           label: 'Программа 4',

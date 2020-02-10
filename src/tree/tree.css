@@ -15,7 +15,7 @@ header span {
 
 .treeBody {
     display: flex;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 li {
@@ -26,16 +26,25 @@ ul {
     list-style: none;
     margin: 0;
     padding-left: 20px;
-    
 }
 
 .toggleDiv {
-    background: red;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='down-arrow' width='8' height='4.5' viewBox='0 0 8 4.5'%3E%3Cdefs%3E%3Cstyle%3E .cls-1%7Bfill:%239d9d9d%7D %3C/style%3E%3C/defs%3E%3Cpath id='Path_116' d='M7.851.148A.48.48 0 0 0 7.5 0h-7a.48.48 0 0 0-.352.148A.481.481 0 0 0 0 .5a.48.48 0 0 0 .148.352l3.5 3.5a.49.49 0 0 0 .7 0l3.5-3.5A.481.481 0 0 0 8 .5a.481.481 0 0 0-.149-.352z' class='cls-1' data-name='Path 116'/%3E%3C/svg%3E%0A") no-repeat center;
     width: 15px;
     height: 15px;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+.toggleDiv.close {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cdefs%3E%3Cstyle%3E .cls-1%7Bfill:%239d9d9d%7D.cls-2%7Bfill:none%7D %3C/style%3E%3C/defs%3E%3Cg id='Group_1595' data-name='Group 1595' transform='rotate(90 6 6)'%3E%3Cg id='down-arrow' transform='translate(2 3.5)'%3E%3Cpath id='Path_116' d='M7.851 4.352A.48.48 0 0 1 7.5 4.5h-7a.48.48 0 0 1-.352-.148.491.491 0 0 1 0-.7l3.5-3.5a.49.49 0 0 1 .7 0l3.5 3.5a.49.49 0 0 1 0 .7z' class='cls-1' data-name='Path 116'/%3E%3C/g%3E%3Cpath id='Rectangle_84' d='M0 0h12v12H0z' class='cls-2' data-name='Rectangle 84'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center;
 }
 
 .treeBody.close{
 display: none;
+}
+
+.count {
+    color: #ff5e5e;
+    margin-left: 15px;
 }
