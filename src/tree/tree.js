@@ -28,7 +28,6 @@ export const Tree = ({ treeData, canClose, label }) => {
           Array.isArray(item.children) &&
           item.children.length > 0
         ) {
-          item['parentId'] = item.id;
           return (
               <Tree key={item.id || index}
                 treeData={item.children}
@@ -51,7 +50,7 @@ export const Tree = ({ treeData, canClose, label }) => {
     <div className = 'tree'>
     <header>
     {canClose && <div className={expanded ? 'toggleDiv' : 'toggleDiv close'} onClick={toggle}></div>}
-    {label && <span>{label}</span>}
+    {label && <span onClick={toggle}>{label}</span>}
     {selectedCount.length > 0 ? <span className = 'count'>Выбрано элементов: {selectedCount.length}</span> : null}
     </header>
       <div className={expanded ? 'treeBody open' : 'treeBody close'}>
